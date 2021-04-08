@@ -1,0 +1,103 @@
+{
+  "sneakers" : {
+    "Adidas" : {
+      "Model" : {
+        "name" : "Crazy BYW 2",
+        "colorway" : "Core Black",
+        "price" : 169,
+        "size" : {
+          "43" : {
+            "quantity" : 87
+          },
+          "44" : {
+            "quantity" : 67
+          },
+          "45" : {
+            "quantity" : 34
+          }
+        }
+      },
+      "Model1" : {
+        "name" : "Yung 1",
+        "colorway" : "White",
+        "price" : 129,
+        "size" : {
+          "43" : {
+            "quantity" : 8
+          },
+          "44" : {
+            "quantity" : 6
+          },
+          "45" : {
+            "quantity" : 3
+          }
+        }
+      }
+      
+    },
+    "Jordan" : {
+      "Model" : {
+        "name": "Air Jordan 1",
+        "colorway" : "Mocha",
+        "price" : 179,
+        "size" : {
+          "43" : {
+            "quantity" : 32
+          },
+          "44" : {
+            "quantity" : 34
+          },
+          "45" : {
+            "quantity" : 47
+          }
+        }
+      }
+    },
+    "Nike" : {
+      "Model" : {
+        "name": "Air Max 90",
+        "colorway" : "Burgundy",
+        "price" : 149,
+        "size" : {
+          "43" : {
+            "quantity" : 10
+          },
+          "44" : 15,
+          "45" : 16
+        }
+      }
+    },
+    "Reebok" : {
+      "Model" : {
+        "name": "Question 1 Mid",
+        "colorway" : "Neon Cherry",
+        "price" : 159,
+        "size" : {
+          "43" : {
+            "quantity" : 36
+          },
+          "44" : {
+            "quantity" : 56
+          },
+          "45" : {
+            "quantity" : 11
+          }
+        }
+      }
+    },
+    "Yeezy" : {
+      "Model" : {
+        "name": "700 V2",
+        "colorway" : "Hospital Blue",
+        "price" : 300,
+        "size" : {
+          "43" : {
+            "quantity" : 12
+          },
+          "44" : 16,
+          "45" : 23
+        }
+      }
+    }
+  }
+}

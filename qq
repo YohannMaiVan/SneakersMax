@@ -1,0 +1,139 @@
+[33mcommit 7a2b8abcc10fa555bd10779ebc4ad754db3a3783[m[33m ([m[1;36mHEAD -> [m[1;32mfull[m[33m, [m[1;31morigin/full[m[33m)[m
+Author: vincentferniotoclock <vincent-ferniot@oclock.io>
+Date:   Wed Sep 30 11:36:42 2020 +0200
+
+    full modele
+
+[33mcommit f1a25509b928f90bb68c1f0cf80296219f933651[m
+Author: Alexis Vincent <44369725+alexisOclock@users.noreply.github.com>
+Date:   Fri Sep 4 09:02:26 2020 +0200
+
+    plus de smart dans la config de prod
+
+[33mcommit 8d63bcf5f34c0ac8923d0bb4e843251ae1c39c36[m
+Author: Alexis Vincent <44369725+alexisOclock@users.noreply.github.com>
+Date:   Thu Aug 13 14:39:02 2020 +0200
+
+    chemin absolu pour publicPath pour éviter les problème avec un router
+
+[33mcommit 5ddd15726cae948cf732d43df934d398e60690a0[m
+Merge: ccafad6 61e90bf
+Author: alexisOclock <alexis@oclock.io>
+Date:   Mon Aug 3 15:11:40 2020 +0200
+
+    Merge branch 'full' of github.com:O-clock-Spe-React/React-modele into full
+
+[33mcommit ccafad6abf3b7a9a996a102d1aea0ffcbb71592c[m
+Author: alexisOclock <alexis@oclock.io>
+Date:   Mon Aug 3 15:11:12 2020 +0200
+
+    on vire lts sur windows
+
+[33mcommit 9df07fe3cadb3569e27efac9b5cfa8019f000365[m
+Author: alexisOclock <alexis@oclock.io>
+Date:   Mon Aug 3 15:08:12 2020 +0200
+
+    prerequis un peu mieux
+
+[33mcommit f7d6b9f9bd0ab2bb085cbca7cbef54dcd130325e[m
+Author: alexisOclock <alexis@oclock.io>
+Date:   Mon Aug 3 13:51:32 2020 +0200
+
+    prérequis sans c
+
+[33mcommit f1e34ebe8c7394dbb9f559cdd53a56bda797871d[m
+Author: alexisOclock <alexis@oclock.io>
+Date:   Mon Aug 3 13:50:27 2020 +0200
+
+    prérecquis
+
+[33mcommit 61e90bf57248d3f44b842e3bdd398a183f331af2[m
+Merge: 93e6d92 b835e5b
+Author: vincentferniotoclock <vincent-ferniot@oclock.io>
+Date:   Mon Jul 6 18:53:23 2020 +0200
+
+    Merge branch 'full' of github.com:O-clock-Spe-React/React-modele into full
+
+[33mcommit 93e6d92d6756786e0f1a2467f061728b29a69c19[m
+Author: vincentferniotoclock <vincent-ferniot@oclock.io>
+Date:   Mon Jul 6 18:52:58 2020 +0200
+
+    [bugfix] named import for merge
+
+[33mcommit b835e5bb4fb3fbef45c5f7f8d3e6f16a55b037a4[m
+Author: alexisOclock <alexis@oclock.io>
+Date:   Wed Jul 1 16:17:44 2020 +0200
+
+    retour de updateDeps
+
+[33mcommit 5baa682a831462656f55a33a4736d5b56ba918b2[m
+Author: alexisOclock <alexis@oclock.io>
+Date:   Tue Jun 16 13:23:23 2020 +0200
+
+    sass @import->@use
+
+[33mcommit a57ab489b6bc6c4d74dd3bcd7a7a7036745ea2fe[m
+Author: vincentferniotoclock <vincent-ferniot@oclock.io>
+Date:   Mon Jun 15 22:44:20 2020 +0200
+
+    [bugfix] manquait le s de watchOptions
+
+[33mcommit 1ee17f906980d9386a2c4de559e4c5e42f30975e[m
+Author: Alexis Vincent <44369725+alexisOclock@users.noreply.github.com>
+Date:   Mon Jun 15 17:21:17 2020 +0200
+
+    watchOption: ignore node_modules
+
+[33mcommit 4ef74e0e1cb9cc867058bb468c4da633bb010376[m
+Author: Alexis Vincent <44369725+alexisOclock@users.noreply.github.com>
+Date:   Fri May 29 17:48:23 2020 +0200
+
+    ajout de cross-env sur les tests pour windows
+
+[33mcommit b1361e3ca993ab81aac01d3211cbce075952bb1b[m
+Author: alexisOclock <alexis@oclock.io>
+Date:   Sun May 17 17:10:51 2020 +0200
+
+    CopyWebpackPlugin options fix
+
+[33mcommit 8b03d3445776487ff144a5ff17a56a9936907261[m
+Author: Alexis Vincent <44369725+alexisOclock@users.noreply.github.com>
+Date:   Wed May 6 16:43:37 2020 +0200
+
+    Update webpack.prod.js
+
+[33mcommit 3997a64b8bfe0ba00c9d6763c5d7187486b86b6a[m
+Author: Alexis Vincent <44369725+alexisOclock@users.noreply.github.com>
+Date:   Wed May 6 16:36:53 2020 +0200
+
+    Update webpack.prod.js
+
+[33mcommit d33ed130c39ea6b5891289047aa7a4f3f27c3a79[m
+Author: Alexis Vincent <44369725+alexisOclock@users.noreply.github.com>
+Date:   Wed May 6 16:33:23 2020 +0200
+
+    Update package.json
+
+[33mcommit b39a7ee490cb61d9497551b99f43bfa5face92f7[m
+Author: alexisOclock <alexis@oclock.io>
+Date:   Tue Feb 18 09:58:01 2020 +0100
+
+    scss entry
+
+[33mcommit ba03a8f008c389690644b0ce7aebf410fdb6a0cf[m
+Author: alexisOclock <alexis@oclock.io>
+Date:   Tue Feb 18 09:55:51 2020 +0100
+
+    repassage à scss
+
+[33mcommit 811ab06b2d3b31d0462cdd9ad600f94e4ea288a3[m
+Author: Philippe Candille <philippe@oclock.io>
+Date:   Thu Jan 23 19:19:37 2020 +0100
+
+    tests et exemple redux
+
+[33mcommit 27530ba5b62381478bb98e91dbfac502276e1899[m
+Author: Philippe Candille <philippe@oclock.io>
+Date:   Thu Jan 23 19:11:03 2020 +0100
+
+    initial

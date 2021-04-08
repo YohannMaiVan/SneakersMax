@@ -1,0 +1,1 @@
+export const baseURL = 'https://sneakersmax-1df2b-default-rtdb.firebaseio.com/sneakers.json';
