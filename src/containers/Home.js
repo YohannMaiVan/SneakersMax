@@ -15,7 +15,7 @@ import { increment, decrement } from '../actions';
  * Pas de data à transmettre ? const mapStateToProps = null;
  */
 const mapStateToProps = (state, ownProps) => ({
-  sneakers: state.products.sneakers,
+  sneakers: state.products,
 });
 
 /* === Actions ===

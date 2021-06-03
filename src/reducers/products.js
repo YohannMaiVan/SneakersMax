@@ -1,48 +1,48 @@
 import { GET_SNEAKERS } from '../actions/sneakers';
 
 const initialState = {
-		sneakers: {
-
-		}
+		AirJordan1: {
+			Brand: "",
+			Quantity: "",
+			Price: "",
+		},
+		QuestionMid: {
+			Brand: "",
+			Quantity: "",
+			Price: "",
+		},
+		Yeezy700V2: {
+			Brand: "",
+			Quantity: "",
+			Price: "",
+		},
 };
 
 const products = (state = initialState, action = {}) => {
   switch (action.type) {
 	case GET_SNEAKERS:
-		console.log("action GETSNEAKERS", action.sneakers.QuestionMid);
+		console.log("action GETSNEAKERS", action.sneakers);
 		const getSneakers = {
 			AirJordan1: action.sneakers.AirJordan1,
 			QuestionMid: action.sneakers.QuestionMid,
 			Yeezy700V2: action.sneakers.Yeezy700V2,
   }
-//   const sneakers = [];
-
-	// for ( let sneakersName in getSneakers ) {
-	// 	sneakers.push(
-	// 		{
-	// 			sneakerName: action.sneakers[sneakersName]
-	// 		}
-	// 	);
-	// }
-
-	// for (const [key, value] of Object.entries(getSneakers.QuestionMid)) {
-	// 	sneakers.push(
-	// 		{
-	// 			key: value
-	// 		}
-	// 	)
-	// 	console.log("sneakers object entries", key, value);
-	// }
-	
-	//const sneakers = new Map(Object.entries(action.sneakers));
-
-	//console.log("sneakers array", sneakers)
 		return {
 			...state,
-			sneakers: {
-			AirJordan1: action.sneakers.AirJordan1,
-			QuestionMid: action.sneakers.QuestionMid,
-			Yeezy700V2: action.sneakers.Yeezy700V2,
+			AirJordan1: {
+			Brand: action.sneakers.AirJordan1.brand,
+			Quantity: action.sneakers.AirJordan1.quantity,
+			Price: action.sneakers.AirJordan1.price,
+			},
+			QuestionMid: {
+				Brand: action.sneakers.QuestionMid.brand,
+				Quantity: action.sneakers.QuestionMid.quantity,
+				Price: action.sneakers.QuestionMid.price,
+			},
+			Yeezy700V2: {
+				Brand: action.sneakers.Yeezy700V2.brand,
+				Quantity: action.sneakers.Yeezy700V2.quantity,
+				Price: action.sneakers.Yeezy700V2.price,
 			}
 		};
     default:
