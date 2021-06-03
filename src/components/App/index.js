@@ -3,19 +3,18 @@ import React, { useEffect } from 'react';
 
 // == Import
 import './styles.scss';
-import Home from '../../containers/Home';
+import HomeContainer from '../../containers/Home';
 import { Route, Switch } from 'react-router-dom';
 
 // == Composant
-const App = ({sneakers, fetchSneakers}) => {
+const App = ({ fetchSneakers }) => {
   useEffect(() => {
     fetchSneakers();
   }, []);
-  console.log("APP", sneakers);
   return (
   <div className="app">
     <Switch>
-      <Route path="/" exact component={Home} />
+      <Route path="/" exact component={HomeContainer} />
     </Switch>
   </div>
 )};

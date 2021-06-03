@@ -8,26 +8,21 @@ import Header from '../Header/index';
 
 // == Composant
 const Home = ({sneakers}) =>{
-  console.log(sneakers);
+  console.log("testttt", sneakers);
   return (
-  <React.Fragment>
+  <div>
     <Header />
-    <div className="home">
+ {sneakers && <div className="home">
       <div className='home-title'>APPAREL SUPER PROMOS! 40% EXTRA WITH CODE: APP40</div>
       <div className="home__model">
-        {
+        {/* {
           sneakers.map((sneaker) => (
-            <Product key={`sneaker-${sneaker.name}` + `sneaker-${ sneaker.colorway}`}
-            brand={sneaker.brand}
-            name={sneaker.name}
-            colorway={sneaker.colorway}
-            price={sneaker.price}
-            />
-          ))
-        }
+            <Product {...sneaker}/>
+            ))
+        } */}
       </div>
-    </div>
-  </React.Fragment>
+    </div>}
+  </div>
 )};
 
 // == Export
