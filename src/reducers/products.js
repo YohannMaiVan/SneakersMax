@@ -22,11 +22,7 @@ const products = (state = initialState, action = {}) => {
   switch (action.type) {
 	case GET_SNEAKERS:
 		console.log("action GETSNEAKERS", action.sneakers);
-		const getSneakers = {
-			AirJordan1: action.sneakers.AirJordan1,
-			QuestionMid: action.sneakers.QuestionMid,
-			Yeezy700V2: action.sneakers.Yeezy700V2,
-  }
+
 		return {
 			...state,
 			AirJordan1: {

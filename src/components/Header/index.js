@@ -24,7 +24,7 @@ const Header = () => (
 		</ul>
 	</div>
 	<ShoppingCart className="header-icon" size={34}/>
-	<User className="header-icon" size={34}/>
+	<NavLink to="/connexion"><User className="header-icon" size={34}/></NavLink>
   </div>
 
 );
