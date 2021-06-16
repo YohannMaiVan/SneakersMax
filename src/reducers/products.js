@@ -27,16 +27,19 @@ const products = (state = initialState, action = {}) => {
 			...state,
 			AirJordan1: {
 			Brand: action.sneakers.AirJordan1.brand,
+			Model: action.sneakers.AirJordan1.model,
 			Quantity: action.sneakers.AirJordan1.quantity,
 			Price: action.sneakers.AirJordan1.price,
 			},
 			QuestionMid: {
 				Brand: action.sneakers.QuestionMid.brand,
+				Model: action.sneakers.QuestionMid.model,
 				Quantity: action.sneakers.QuestionMid.quantity,
 				Price: action.sneakers.QuestionMid.price,
 			},
 			Yeezy700V2: {
 				Brand: action.sneakers.Yeezy700V2.brand,
+				Model: action.sneakers.Yeezy700V2.model,
 				Quantity: action.sneakers.Yeezy700V2.quantity,
 				Price: action.sneakers.Yeezy700V2.price,
 			}

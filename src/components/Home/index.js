@@ -13,46 +13,39 @@ const Home = ({sneakers}) =>{
   console.log("array", sneakersArray)
   const [searchTerm, setSearchTerm] = useState("");
   console.log("value searchTerm", searchTerm);
-  console.log("longueur sneakers array", sneakersArray.length);
   let arrayName= [];
   for (let i = 0; i<sneakersArray.length; i++){
+    sneakersArray[i].shift();
     arrayName.push(sneakersArray[i][0]);
   }
-  console.log("arrayName value", arrayName);
+  console.log("sneakersArray value", sneakersArray);
+  console.log("arrayname value", arrayName);
+  const DisplaySneakers = () => {
+    if (searchTerm == "") {
+      return (
+        arrayName.map((sneaker) => (
+        <Product sneaker={sneaker} />
+          ))
+        )
+      }        
+    else {
+}}
   return (
   <div>
     <Header />
  {sneakers && <div className="home">
       <div className='home-title'>APPAREL SUPER PROMOS! 40% EXTRA WITH CODE: APP40</div>
-			<input
+      <input
         type="text"
         placeholder="Search for a product..."
         onChange={(event) => {
           setSearchTerm(event.target.value);
         }}/>
       <div className="home__model">
-        {
-            searchTerm == "" ? sneakersArray.map((sneaker) => (
-              <Product sneaker={sneaker}
-              searchTerm={searchTerm} />
-              ))
-              : <div>test</div>
-          // })
-          // sneakersArray.map((sneaker) => (
-          //   <Product sneaker={sneaker}
-          //   searchTerm={searchTerm} />
-          //   ))
-        }
-        {/* {
-              sneakersArray.filter((val)=> {
-                if (val.name.toLowerCase().includes(searchTerm.toLowerCase())){
-                  <div>Product</div>
-                }
-              }
-        } */}
-      </div>
-    </div>}
-  </div>
+        <DisplaySneakers />
+    </div>
+  </div>}
+</div>
 )};
 
 // == Export

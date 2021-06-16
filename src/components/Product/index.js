@@ -6,14 +6,14 @@ import './styles.scss';
 import AirJordanOffWhite from '../../assets/aj1OffWhite.png';
 
 // == Composant
-const Product = ({ sneaker, searchTerm }) => {
-	console.log("searchTerm", searchTerm);
+const Product = ({ sneaker }) => {
+	console.log("sneakers props", sneaker);
 	return (
 		<Fragment>
 			<div className="product"> 
 				<img src={AirJordanOffWhite} style={{width: '180px', height: '120px'}} />
-				<h2>{sneaker[1].Brand} {sneaker[1].Quantity}</h2>
-				<p>{sneaker[1].Price}€</p>
+				<h2>{sneaker.Brand} {sneaker.Quantity}</h2>
+				<p>{sneaker.Price}€</p>
 			</div>
 		</Fragment>
 )};
