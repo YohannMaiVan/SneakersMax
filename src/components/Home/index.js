@@ -18,18 +18,23 @@ const Home = ({sneakers}) =>{
     sneakersArray[i].shift();
     arrayName.push(sneakersArray[i][0]);
   }
-  console.log("sneakersArray value", sneakersArray);
   console.log("arrayname value", arrayName);
   const DisplaySneakers = () => {
-    if (searchTerm == "") {
+    if (searchTerm != "") {
+      return (
+        arrayName.filter(sneaker => (sneaker.Brand.toLowerCase().includes(searchTerm.toLowerCase()))).map((sneaker) => (
+          <Product sneaker={sneaker} />
+        ))
+      )
+        }
+    else {
       return (
         arrayName.map((sneaker) => (
-        <Product sneaker={sneaker} />
-          ))
-        )
-      }        
-    else {
-}}
+          <Product sneaker={sneaker} />
+        ))
+      )
+    }
+}
   return (
   <div>
     <Header />
