@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Inscription from 'src/components/Inscription';
 
 // Action Creators
-import { changeSignUpFieldValue } from '../actions/inscription';
+import { changeMailFieldValue, changePasswordFieldValue, submitSignUp } from '../actions/inscription';
 
 /* === State (données) ===
  * - mapStateToProps retroune un objet de props pour le composant de présentation
@@ -13,7 +13,7 @@ import { changeSignUpFieldValue } from '../actions/inscription';
  * Pas de data à transmettre ? const mapStateToProps = null;
  */
 const mapStateToProps = (state, ownProps) => ({
-	mail: state.inscription.user.mail,
+	email: state.inscription.user.email,
 	password: state.inscription.user.password
 });
 
@@ -25,8 +25,14 @@ const mapStateToProps = (state, ownProps) => ({
  * Pas de disptach à transmettre ? const mapDispatchToProps = {};
  */
 const mapDispatchToProps = (dispatch, ownProps) => ({
-	changeSignUpFieldValue: (field, value) => {
-		dispatch(changeSignUpFieldValue(field, value));
+	changeMailFieldValue: (email) => {
+		dispatch(changeMailFieldValue(email));
+	},
+	changePasswordFieldValue: (password) => {
+		dispatch(changePasswordFieldValue(password));
+	},
+	submitSignUp: () => {
+		dispatch(submitSignUp());
 	}
 });
 

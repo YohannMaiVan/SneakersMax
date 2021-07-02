@@ -1,11 +1,10 @@
-import { CHANGE_MAIL_FIELD_VALUE, CHANGE_PASSWORD_FIELD_VALUE, SAVE_REGISTRATION } from '../actions/inscription';
+import { SAVE_USER } from '../actions/inscription';
 
 const initialState = {
   user: {
 	  email: '',
 	  password: '',
-  },
-  keyId: ''
+  }
 };
 
 const inscription = (state = initialState, action = {}) => {
@@ -26,14 +25,9 @@ const inscription = (state = initialState, action = {}) => {
             password: action.password
           }
         };
-        case SAVE_REGISTRATION:
-          return {
-            ...state,
-            keyId: action.payload.idToken
-          };
     default:
       return state;
   }
 };
 
-export default inscription;
+export default connexion;
