@@ -6,9 +6,17 @@ import './styles.scss';
 import { Home, ShoppingCart, User} from 'react-feather';
 import mainLogo from '../../assets/sneakersMax.jpeg';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { disconnect } from '../../actions/connexion';
 
 // == Composant
-const Header = () => (
+const Header = ({disconnect}) => {
+	const disconnectOnClick = (event) => {
+		event.preventDefault();
+		console.log('testDisconnect');
+		disconnect();
+	}
+	return (
   <div className="header">
 	<NavLink to="/"><Home className="header-icon" size={34}/></NavLink>
 	<div className="header__central">
@@ -25,9 +33,16 @@ const Header = () => (
 	</div>
 	<ShoppingCart className="header-icon" size={34}/>
 	<NavLink to="/connexion"><User className="header-icon" size={34}/></NavLink>
+	<button onClick={disconnectOnClick}>Déconnexion</button>
   </div>
 
-);
+)};
+
+const mapDispatchToProps = (dispatch) => ({
+	disconnect: () => {
+	  dispatch(disconnect());
+	}
+  });
 
 // == Export
-export default Header;
+export default connect(null, mapDispatchToProps)(Header);

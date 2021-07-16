@@ -6,6 +6,7 @@ import rootReducer from 'src/reducers';
 import logMiddleware from '../middleware/logMiddleware';
 import sneakersMiddleware from '../middleware/sneakersMiddleware';
 import signUpMiddleware from '../middleware/signUpMiddleware';
+import signInMiddleware from '../middleware/signInMiddleware';
 
 
 // == Enhancers
@@ -16,6 +17,7 @@ const enhancers = composeEnhancers(
     logMiddleware,
     sneakersMiddleware,
     signUpMiddleware,
+    signInMiddleware
     // secondMiddleware,
   ),
 );

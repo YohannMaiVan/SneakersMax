@@ -1,4 +1,4 @@
-import { SAVE_USER } from '../actions/inscription';
+import {  CONNEXION_CHANGE_MAIL_FIELD_VALUE, CONNEXION_CHANGE_PASSWORD_FIELD_VALUE , DISCONNECT, SAVE_USER_DATA } from '../actions/connexion';
 
 const initialState = {
   user: {
@@ -7,9 +7,9 @@ const initialState = {
   }
 };
 
-const inscription = (state = initialState, action = {}) => {
+const connexion = (state = initialState, action = {}) => {
   switch (action.type) {
-    case CHANGE_MAIL_FIELD_VALUE:
+    case CONNEXION_CHANGE_MAIL_FIELD_VALUE:
       return {
         ...state,
         user: {
@@ -17,7 +17,7 @@ const inscription = (state = initialState, action = {}) => {
           email: action.email
         }
       };
-      case CHANGE_PASSWORD_FIELD_VALUE:
+      case CONNEXION_CHANGE_PASSWORD_FIELD_VALUE:
         return {
           ...state,
           user: {
@@ -25,6 +25,16 @@ const inscription = (state = initialState, action = {}) => {
             password: action.password
           }
         };
+        case SAVE_USER_DATA:
+          return {
+            ...state,
+            keyId: action.payload.idToken
+          };
+        case DISCONNECT: 
+        return {
+          ...state,
+          keyId: ''
+        }
     default:
       return state;
   }

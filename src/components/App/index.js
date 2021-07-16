@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 import './styles.scss';
 import HomeContainer from '../../containers/Home';
 import Inscription from '../../containers/Inscription';
-import Connexion from '../Connexion';
+import Connexion from '../../containers/Connexion';
 import { Route, Switch } from 'react-router-dom';
 
 // == Composant
