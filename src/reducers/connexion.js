@@ -2,9 +2,7 @@ import {  CONNEXION_CHANGE_MAIL_FIELD_VALUE, CONNEXION_CHANGE_PASSWORD_FIELD_VAL
 
 const initialState = {
   user: {
-	  email: '',
-	  password: '',
-  }
+  },
 };
 
 const connexion = (state = initialState, action = {}) => {

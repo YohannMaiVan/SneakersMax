@@ -35,6 +35,7 @@ const Home = ({sneakers}) =>{
       )
     }
 }
+
   return (
   <div>
     <Header />

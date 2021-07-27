@@ -3,12 +3,13 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { PersistGate } from 'redux-persist/integration/react';
 
 // == Import : local
 // Composants
 import App from 'src/containers/App';
 // Store
-import store from 'src/store';
+import { store, persistor } from 'src/store';
 
 // == Render
 // 1. Élément React racine (celui qui contient l'ensemble de l'app)
@@ -16,7 +17,9 @@ import store from 'src/store';
 const rootReactElement = (
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <PersistGate persistor={persistor}>
+        <App />
+      </PersistGate>
     </BrowserRouter>
   </Provider>
 );
