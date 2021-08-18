@@ -1,13 +1,20 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addShoppingCart } from '../../actions/shoppingCart';
 
 import './styles.scss';
 import Header from '../Header/index';
 
 // == Composant
 const DetailProduct = (sneaker) => {
-	console.log('sneaker Detail product', sneaker);
 	const selectedProduct = sneaker.location.state.sneaker;
-	console.log('sneaker selectedProduct', selectedProduct);
+	const panier = useSelector(state => state.shoppingCart);
+	const dispatch = useDispatch();
+
+	const addShoppingCartOnClick = (event) => {
+		event.preventDefault();
+		dispatch(addShoppingCart());
+	}
 	return (
 		<>
 			<Header/>
@@ -19,7 +26,7 @@ const DetailProduct = (sneaker) => {
 					<h2>Nom du modèle: {selectedProduct.Model}</h2>
 					<p>Prix: {selectedProduct.Price}€</p>
 					<p>Quantité: {selectedProduct.Quantity}</p>
-					<button>Ajouter au panier</button>
+					<button onClick={addShoppingCartOnClick} >Ajouter au panier</button>
 				</div>
 			</div>
 		</>

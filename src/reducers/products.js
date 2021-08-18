@@ -1,21 +1,7 @@
 import { GET_SNEAKERS } from '../actions/sneakers';
 
 const initialState = {
-		AirJordan1: {
-			Brand: "",
-			Quantity: "",
-			Price: "",
-		},
-		QuestionMid: {
-			Brand: "",
-			Quantity: "",
-			Price: "",
-		},
-		Yeezy700V2: {
-			Brand: "",
-			Quantity: "",
-			Price: "",
-		},
+
 };
 
 const products = (state = initialState, action = {}) => {

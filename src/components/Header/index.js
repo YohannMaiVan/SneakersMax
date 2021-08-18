@@ -3,10 +3,10 @@ import React from 'react';
 
 // == Import
 import './styles.scss';
-import { Home, ShoppingCart, User} from 'react-feather';
+import { Home, ShoppingBag, User} from 'react-feather';
 import mainLogo from '../../assets/sneakersMax.jpeg';
 import { NavLink } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import { disconnect } from '../../actions/connexion';
 
 // == Composant
@@ -16,6 +16,8 @@ const Header = ({disconnect}) => {
 		console.log('testDisconnect');
 		disconnect();
 	}
+	const panier = useSelector(state => state.shoppingCart.shoppingCart);
+	console.log("shoppingCart", panier);
 	return (
   <div className="header">
 	<NavLink to="/"><Home className="header-icon" size={34}/></NavLink>
@@ -31,7 +33,10 @@ const Header = ({disconnect}) => {
 			<li><NavLink to="/Reebok">REEBOK</NavLink></li>
 		</ul>
 	</div>
-	<ShoppingCart className="header-icon" size={34}/>
+	{panier > 0 ? 
+		<ShoppingBag className="header-icon-notEmpty" size={34}/>:
+		<ShoppingBag className="header-icon" size={34}/>
+	}
 	<NavLink to="/connexion"><User className="header-icon" size={34}/></NavLink>
 	<button onClick={disconnectOnClick}>Déconnexion</button>
   </div>

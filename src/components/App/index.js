@@ -6,7 +6,7 @@ import './styles.scss';
 import HomeContainer from '../../containers/Home';
 import Inscription from '../../containers/Inscription';
 import Connexion from '../../containers/Connexion';
-import DetailProduct from '../../components/DetailProduct';
+import DetailProduct from '../../containers/DetailProduct';
 import { Route, Switch } from 'react-router-dom';
 
 // == Composant
