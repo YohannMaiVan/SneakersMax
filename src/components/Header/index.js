@@ -1,5 +1,5 @@
 // == Import npm
-import React from 'react';
+import React, { useState } from 'react';
 
 // == Import
 import './styles.scss';
@@ -8,6 +8,7 @@ import mainLogo from '../../assets/sneakersMax.jpeg';
 import { NavLink } from 'react-router-dom';
 import { connect, useSelector } from 'react-redux';
 import { disconnect } from '../../actions/connexion';
+import Modal from '../../containers/Modal';
 
 // == Composant
 const Header = ({disconnect}) => {
@@ -16,6 +17,11 @@ const Header = ({disconnect}) => {
 		console.log('testDisconnect');
 		disconnect();
 	}
+	const [showModal, setModal] = useState(false);
+	const showModalOnClick = () => {
+		setModal(!showModal);
+		console.log('SHOW MODAL', showModal)
+	};
 	const panier = useSelector(state => state.shoppingCart.shoppingCart);
 	console.log("shoppingCart", panier);
 	return (
@@ -34,11 +40,14 @@ const Header = ({disconnect}) => {
 		</ul>
 	</div>
 	{panier > 0 ? 
-		<ShoppingBag className="header-icon-notEmpty" size={34}/>:
+		<ShoppingBag onClick={showModalOnClick} className="header-icon-notEmpty" size={34}/>:
 		<ShoppingBag className="header-icon" size={34}/>
 	}
 	<NavLink to="/connexion"><User className="header-icon" size={34}/></NavLink>
 	<button onClick={disconnectOnClick}>Déconnexion</button>
+	{showModal && (
+		<Modal showModal={showModal}/>
+	)}
   </div>
 
 )};

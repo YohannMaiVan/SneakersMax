@@ -2,11 +2,9 @@
 import { connect } from 'react-redux';
 
 // == Import : local
-import DetailProduct from 'src/components/DetailProduct';
+import Modal from 'src/components/Modal';
 
 // Action Creators
-import { addShoppingCart } from '../actions/shoppingCart';
-import { selectedProduct } from '../actions/sneakers';
 
 /* === State (données) ===
  * - mapStateToProps retroune un objet de props pour le composant de présentation
@@ -16,8 +14,8 @@ import { selectedProduct } from '../actions/sneakers';
  * Pas de data à transmettre ? const mapStateToProps = null;
  */
 const mapStateToProps = (state, ownProps) => ({
-  shoppingCart: state.shoppingCart
-});
+	sneakers: state.products,
+  });
 
 /* === Actions ===
  * - mapDispatchToProps retroune un objet de props pour le composant de présentation
@@ -26,15 +24,8 @@ const mapStateToProps = (state, ownProps) => ({
  *  - ownProps : les props passées au container
  * Pas de disptach à transmettre ? const mapDispatchToProps = {};
  */
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  addShoppingCart: () => {
-    dispatch(addShoppingCart());
-  },
-  selectedProduct: (sneaker) => {
-    dispatch(selectedProduct(sneaker));
-  },
-});
+const mapDispatchToProps = (dispatch, ownProps) => null;
 
 
 // == Export
-export default connect(mapStateToProps, mapDispatchToProps)(DetailProduct);
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);

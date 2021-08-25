@@ -1,7 +1,6 @@
 import { GET_SNEAKERS } from '../actions/sneakers';
 
 const initialState = {
-
 };
 
 const products = (state = initialState, action = {}) => {

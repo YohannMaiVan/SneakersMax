@@ -6,6 +6,7 @@ import products from './products';
 import inscription from './inscription';
 import connexion from './connexion';
 import shoppingCart from './shoppingCart'
+import selectedProduct from './selectedProduct'
 
 const persistConfig = {
   key: 'root',
@@ -18,7 +19,8 @@ const rootReducer = combineReducers({
   products,
   inscription,
   connexion,
-  shoppingCart
+  shoppingCart,
+  selectedProduct
 });
 
 export default persistReducer(persistConfig, rootReducer);
