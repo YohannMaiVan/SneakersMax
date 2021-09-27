@@ -45,9 +45,6 @@ const Header = ({disconnect}) => {
 	}
 	<NavLink to="/connexion"><User className="header-icon" size={34}/></NavLink>
 	<button onClick={disconnectOnClick}>Déconnexion</button>
-	{showModal && (
-		<Modal showModal={showModal}/>
-	)}
   </div>
 
 )};

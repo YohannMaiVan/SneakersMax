@@ -1,15 +1,16 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addShoppingCart } from '../../actions/shoppingCart';
 import { selectedProduct } from '../../actions/sneakers';
 
 import './styles.scss';
 import Header from '../Header/index';
+import Modal from '../../containers/Modal';
 
 // == Composant
 const DetailProduct = (sneaker) => {
 	const pageProduct = sneaker.location.state.sneaker;
-	const panier = useSelector(state => state.shoppingCart);
+	const panier = useSelector(state => state.shoppingCart.shoppingCart);
 	const dispatch = useDispatch();
 
 	const addShoppingCartOnClick = (event) => {
@@ -19,6 +20,18 @@ const DetailProduct = (sneaker) => {
 	 useEffect(() => {
 		dispatch(selectedProduct(pageProduct));
   }, []);
+
+	const [showModal, setModal] = useState(false);
+	const showModalOnClick = () => {
+		setModal(!showModal);
+		console.log('SHOW MODAL', showModal)
+	};
+
+	const callFunctionOnClick = (event) => {
+		addShoppingCartOnClick(event);
+		showModalOnClick();
+	}
+
 	return (
 		<>
 			<Header/>
@@ -30,8 +43,11 @@ const DetailProduct = (sneaker) => {
 					<h2>Nom du modèle: {pageProduct.Model}</h2>
 					<p>Prix: {pageProduct.Price}€</p>
 					<p>Quantité: {pageProduct.Quantity}</p>
-					<button onClick={addShoppingCartOnClick} >Ajouter au panier</button>
+					<button onClick={callFunctionOnClick} >Ajouter au panier</button>
 				</div>
+				{showModal && (
+					<Modal showModal={showModal} pageProduct={pageProduct}/>
+				)}
 			</div>
 		</>
 

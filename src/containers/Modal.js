@@ -1,10 +1,12 @@
 // == Import : npm
+import { ShoppingCart } from 'react-feather';
 import { connect } from 'react-redux';
 
 // == Import : local
 import Modal from 'src/components/Modal';
 
 // Action Creators
+import { saveShoppingCart } from '../actions/shoppingCart';
 
 /* === State (données) ===
  * - mapStateToProps retroune un objet de props pour le composant de présentation
@@ -24,7 +26,12 @@ const mapStateToProps = (state, ownProps) => ({
  *  - ownProps : les props passées au container
  * Pas de disptach à transmettre ? const mapDispatchToProps = {};
  */
-const mapDispatchToProps = (dispatch, ownProps) => null;
+const mapDispatchToProps = (dispatch, ownProps) => ({
+	saveShoppingCart: (shoppingCart) => {
+		dispatch(saveShoppingCart(shoppingCart));
+	}
+});
+// const mapDispatchToProps = {};
 
 
 // == Export

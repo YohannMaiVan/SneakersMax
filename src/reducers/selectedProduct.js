@@ -1,4 +1,5 @@
 import { SELECTED_PRODUCT } from '../actions/sneakers';
+import { SAVE_SHOPPING_CART } from '../actions/shoppingCart';
 
 const initialState = {
 	selectedProduct: {
@@ -17,6 +18,8 @@ const selectedProduct = (state = initialState, action = {}) => {
 		return {
 			...state,
 		};
+	case SAVE_SHOPPING_CART:
+		console.log("ACTION SAVE SHOPPING CART", action.shoppingCart);
 	default:
       return state;
   }
