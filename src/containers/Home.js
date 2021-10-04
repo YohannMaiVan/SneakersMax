@@ -16,6 +16,8 @@ import { increment, decrement } from '../actions';
  */
 const mapStateToProps = (state, ownProps) => ({
   sneakers: state.products,
+  shoppingCart: state.shoppingCart.shoppingCart,
+  sneakerCart: state.selectedProduct.sneaker
 });
 
 /* === Actions ===

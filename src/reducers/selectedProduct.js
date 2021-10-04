@@ -2,13 +2,7 @@ import { SELECTED_PRODUCT } from '../actions/sneakers';
 import { SAVE_SHOPPING_CART } from '../actions/shoppingCart';
 
 const initialState = {
-	selectedProduct: {
-			Brand: "",
-			Model: "",
-			Quantity: "",
-			Price: "",
-			Image: ""
-	}
+	sneaker: [],
 };
 
 const selectedProduct = (state = initialState, action = {}) => {
@@ -20,6 +14,10 @@ const selectedProduct = (state = initialState, action = {}) => {
 		};
 	case SAVE_SHOPPING_CART:
 		console.log("ACTION SAVE SHOPPING CART", action.shoppingCart);
+		return {
+			...state,
+			sneaker: state.sneaker.concat(action.shoppingCart)
+		};
 	default:
       return state;
   }

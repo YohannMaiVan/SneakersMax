@@ -6,26 +6,24 @@ import './styles.scss';
 import { NavLink } from 'react-router-dom';
 
 // == Composant
-const Modal = ({ showModal, sneakers, pageProduct, saveShoppingCart }) => {
-	console.log("page product", pageProduct);
-	console.log("SHOWMODAL", showModal);
-	console.log("state products", sneakers);
+const Modal = ({ showModal, pageProduct, saveShoppingCart, sneakerCart }) => {
 	useEffect(() => {
-		console.log('test');
 		saveShoppingCart(pageProduct);
 	  }, []);
+	  console.log("test sneakerCART", sneakerCart)
 	return (
+		sneakerCart.map((sneaker) => (
 			<div className="modal">
+				{console.log("sneaker iteration", sneaker)}
 				<h2>PANIER</h2>
-					<h3>Modèle:</h3>
-					<h3>Prix:</h3>
+					<h3>Modèle: {sneaker.Model}</h3>
+					<h3>Prix: {sneaker.Price}</h3>
 					<div>
 						Livraison: Gratuite<br/>
-						Total:
 					</div>
-
 			</div>
-)};
+	))
+		)};
 
 // == Export
 export default Modal;

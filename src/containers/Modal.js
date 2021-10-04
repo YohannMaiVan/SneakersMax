@@ -17,6 +17,7 @@ import { saveShoppingCart } from '../actions/shoppingCart';
  */
 const mapStateToProps = (state, ownProps) => ({
 	sneakers: state.products,
+	sneakerCart: state.selectedProduct.sneaker
   });
 
 /* === Actions ===

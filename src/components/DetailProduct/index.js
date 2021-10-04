@@ -38,12 +38,12 @@ const DetailProduct = (sneaker) => {
 			<div className="detailProduct"> 
 				<div>
 					<img src={pageProduct.Image} style={{width: '40vw', height: '30vw'}}></img>
-				</div>
 				<div className="detailProduct-info">
 					<h2>Nom du modèle: {pageProduct.Model}</h2>
 					<p>Prix: {pageProduct.Price}€</p>
 					<p>Quantité: {pageProduct.Quantity}</p>
 					<button onClick={callFunctionOnClick} >Ajouter au panier</button>
+				</div>
 				</div>
 				{showModal && (
 					<Modal showModal={showModal} pageProduct={pageProduct}/>

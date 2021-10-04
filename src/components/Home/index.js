@@ -5,10 +5,11 @@ import React, { useState } from 'react';
 import './styles.scss';
 import Product from '../Product/index';
 import Header from '../Header/index';
+import Modal from '../../containers/Modal';
 import ObjectToArray from 'src/selectors/ObjectToArray';
 
 // == Composant
-const Home = ({sneakers}) =>{
+const Home = ({sneakers, shoppingCart, sneakerCart}) =>{
   const sneakersArray = ObjectToArray(sneakers)
   console.log("array", sneakersArray)
   const [searchTerm, setSearchTerm] = useState("");
@@ -51,6 +52,9 @@ const Home = ({sneakers}) =>{
         <DisplaySneakers />
     </div>
   </div>}
+        {shoppingCart && 
+          <Modal sneakerCart/>
+        }
 </div>
 )};
 
