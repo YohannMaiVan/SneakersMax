@@ -1,12 +1,12 @@
 .product {
-	width: 45%;
-	height: 200px;
-	border: 3px solid rgb(146, 140, 140);
+  width: 45%;
+  height: 200px;
+  border: 1px solid #5a5a5a;
 }
 
 @media (min-width: 768px) {
-		.product {
-			width: 24%;
-			margin: 5px 0;
-		}
-	}
+  .product {
+    width: 24%;
+    margin: 5px 0;
+  }
+}
